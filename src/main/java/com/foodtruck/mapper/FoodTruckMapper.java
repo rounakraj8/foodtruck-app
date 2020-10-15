@@ -15,7 +15,7 @@ public class FoodTruckMapper {
 
   public List<FoodTruck> getFoodTruckList(String jsonStr) {
     try {
-      return objectMapper.readValue(jsonStr, new TypeReference<>() {
+      return objectMapper.readValue(jsonStr, new TypeReference<List<FoodTruck>>() {
       });
     } catch (Exception e) {
       e.printStackTrace();
