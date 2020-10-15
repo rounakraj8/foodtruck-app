@@ -4,6 +4,7 @@ import com.foodtruck.model.FoodTruck;
 import java.time.LocalDateTime;
 import java.time.LocalTime;
 import java.time.format.DateTimeFormatter;
+import java.time.format.DateTimeParseException;
 import java.util.Collections;
 import java.util.Comparator;
 import java.util.List;
@@ -29,9 +30,14 @@ public class FoodTruckFinderUtil {
 
   public static boolean isCurrentTimeInFoodTruckTimingRange(FoodTruck foodTruck,
       DateTimeFormatter dateTimeFormatter, LocalDateTime localDateTime) {
-    return LocalTime.parse(foodTruck.getStart24(), dateTimeFormatter)
-        .isBefore(localDateTime.toLocalTime()) && LocalTime.parse(foodTruck
-        .getEnd24(), dateTimeFormatter).isAfter(localDateTime.toLocalTime());
+    try {
+      return LocalTime.parse(foodTruck.getStart24() + 1, dateTimeFormatter)
+          .isBefore(localDateTime.toLocalTime()) && LocalTime.parse(foodTruck
+          .getEnd24(), dateTimeFormatter).isAfter(localDateTime.toLocalTime());
+    } catch (DateTimeParseException e) {
+      System.out.println("Error while parsing date: " + foodTruck);
+      return false;
+    }
   }
 
   public static String getDayOfWeek(LocalDateTime localDateTime) {
