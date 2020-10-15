@@ -52,7 +52,7 @@ You are free to use any external libraries if your design calls for it.
 ## Submitting your work  
  
 Please email us a zipped folder containing your work. Your submission should include:  
-Your code. 
+Your code.    
 A README file that contains instructions on how to do the following on Linux or Mac  OSX (if you need an exception to this, let us know):  
 ○ install dependencies.  
 ○ build your program.   
