@@ -37,6 +37,11 @@ Sample artifact(*.jar) name - `foodtruck-app-1.0-SNAPSHOT.jar`
 
 To run this app, you can use `java -jar target/foodtruck-app-1.0-SNAPSHOT.jar` in the location where generated artifact(*.jar) is present.
 
+If you have more than 10 food-truck available, you will get option to either continue or exit.
+
+For continuing, we need to enter 1
+For exiting, we need to enter 0
+
 ### Build & Run the App(using _start.sh_ script)
 
 There is a _start.sh_ script in the root folder which can be used to build the artifact(*.jar) and run the app.
