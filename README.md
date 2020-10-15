@@ -32,6 +32,6 @@ To run this app, you can use `java -jar target/foodtruck-app-1.0-SNAPSHOT.jar` i
 
 ### Build & Run the App(using start.sh script)
 
-There is a start.sh script which can be used to build the artifact(JAR) and run the app.
+There is a _start.sh_ script in the root folder which can be used to build the artifact(JAR) and run the app.
 
 `./start.sh `
