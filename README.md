@@ -22,8 +22,8 @@ The following should be installed to build & run this app:
 ### Dependencies
 
 1. **jackson-databind** -  It is the only external dependency used in the app. 
-Since this is mentioned in the pom.xml file as a dependency, so we don't need to explicitly install this.
-    Maven will download this dependency automatically.
+Since this is mentioned in the pom.xml file as a dependency, we don't need to explicitly install this.
+    Maven will download this dependency automatically at the time of build.
     
 ### Build the App
 1. We need to clone this repository. - `git clone https://github.com/rounakraj8/foodtruck-app.git`
