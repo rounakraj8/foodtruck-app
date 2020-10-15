@@ -1,6 +1,11 @@
 # foodtruck-app
 
-This app can be used to get list of all food trucks that are open at the current time.
+This app can be used to get list of all food trucks that are open in San Francisco at the current time.
+
+### Data Source
+
+   San Francisco government’s website has a public data
+   URL - https://data.sfgov.org/Economy-and-Community/Mobile-Food-Schedule/jjew-r69b
 
 ### Prerequisites
 
@@ -17,18 +22,17 @@ Since this is mentioned in the pom.xml file as a dependency, so we don't need to
 ### Build the App
 1. We need to clone this repository. - `git clone https://github.com/rounakraj8/foodtruck-app.git`
 2. Go inside the directory. - `cd foodtruck-app`
-3. Build this app & generate the artifact(JAR), using _mvn_ command. - `mvn clean package`
+3. Build this app & generate the artifact(*.jar), using _mvn_ command. - `mvn clean package`.
+    This command will compile the programs & generate a *.jar with all required dependencies.
 
-This command will compile the programs & generate a JAR with all required dependencies.
-
-Sample artifact(JAR) name - `foodtruck-app-1.0-SNAPSHOT.jar`
+Sample artifact(*.jar) name - `foodtruck-app-1.0-SNAPSHOT.jar`
     
 ### Run the App(manually)
 
-To run this app, you can use `java -jar target/foodtruck-app-1.0-SNAPSHOT.jar` in the location where generated artifact(JAR) is present.
+To run this app, you can use `java -jar target/foodtruck-app-1.0-SNAPSHOT.jar` in the location where generated artifact(*.jar) is present.
 
 ### Build & Run the App(using _start.sh_ script)
 
-There is a _start.sh_ script in the root folder which can be used to build the artifact(JAR) and run the app.
+There is a _start.sh_ script in the root folder which can be used to build the artifact(*.jar) and run the app.
 
 `./start.sh `
