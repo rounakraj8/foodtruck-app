@@ -9,7 +9,7 @@ This app can be used to get list of all food trucks that are open in San Francis
 
 ### Prerequisites
 
-The following  should be installed to build & run this app:
+The following should be installed to build & run this app:
 1. JRE 1.8 or above
 2. Maven 3.6 or above
 
