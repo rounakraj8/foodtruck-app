@@ -11,6 +11,9 @@ import java.util.stream.Collectors;
 
 public class FoodTruckFinderUtil {
 
+  public static boolean isFoodTruckListEmpty(final List<FoodTruck> foodTruckList) {
+    return foodTruckList == null || foodTruckList.size() == 0;
+  }
 
   public static List<FoodTruck> sortFoodTruckListByName(List<FoodTruck> foodTruckList) {
     Collections.sort(foodTruckList, Comparator.comparing(FoodTruck::getApplicant));
