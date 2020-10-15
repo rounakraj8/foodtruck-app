@@ -1,4 +1,4 @@
-package com.oracle.foodtruck.constants;
+package com.foodtruck.constants;
 
 public class URLConstants {
 

@@ -1,4 +1,4 @@
-package com.oracle.foodtruck.client;
+package com.foodtruck.client;
 
 public interface Client {
 

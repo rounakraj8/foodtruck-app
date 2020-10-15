@@ -1,12 +1,12 @@
-package com.oracle.foodtruck.service;
+package com.foodtruck.service;
 
-import com.oracle.foodtruck.client.Client;
-import com.oracle.foodtruck.client.HttpClientImpl;
-import com.oracle.foodtruck.constants.URLConstants;
-import com.oracle.foodtruck.mapper.FoodTruckMapper;
-import com.oracle.foodtruck.model.FoodTruck;
-import com.oracle.foodtruck.util.FoodTruckDisplayUtil;
-import com.oracle.foodtruck.util.FoodTruckFinderUtil;
+import com.foodtruck.util.FoodTruckFinderUtil;
+import com.foodtruck.client.Client;
+import com.foodtruck.client.HttpClientImpl;
+import com.foodtruck.constants.URLConstants;
+import com.foodtruck.mapper.FoodTruckMapper;
+import com.foodtruck.model.FoodTruck;
+import com.foodtruck.util.FoodTruckDisplayUtil;
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
 import java.util.List;

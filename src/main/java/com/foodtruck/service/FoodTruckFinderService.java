@@ -1,4 +1,4 @@
-package com.oracle.foodtruck.service;
+package com.foodtruck.service;
 
 public interface FoodTruckFinderService {
 

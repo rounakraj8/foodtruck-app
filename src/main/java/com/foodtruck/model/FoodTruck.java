@@ -1,4 +1,4 @@
-package com.oracle.foodtruck.model;
+package com.foodtruck.model;
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 

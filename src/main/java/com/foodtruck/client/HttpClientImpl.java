@@ -1,4 +1,4 @@
-package com.oracle.foodtruck.client;
+package com.foodtruck.client;
 
 import java.io.BufferedReader;
 import java.io.IOException;

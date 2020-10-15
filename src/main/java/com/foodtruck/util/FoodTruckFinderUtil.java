@@ -1,6 +1,6 @@
-package com.oracle.foodtruck.util;
+package com.foodtruck.util;
 
-import com.oracle.foodtruck.model.FoodTruck;
+import com.foodtruck.model.FoodTruck;
 import java.time.LocalDateTime;
 import java.time.LocalTime;
 import java.time.format.DateTimeFormatter;

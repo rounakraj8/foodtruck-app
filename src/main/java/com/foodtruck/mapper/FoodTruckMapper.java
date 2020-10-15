@@ -1,8 +1,8 @@
-package com.oracle.foodtruck.mapper;
+package com.foodtruck.mapper;
 
 import com.fasterxml.jackson.core.type.TypeReference;
 import com.fasterxml.jackson.databind.ObjectMapper;
-import com.oracle.foodtruck.model.FoodTruck;
+import com.foodtruck.model.FoodTruck;
 import java.util.List;
 
 public class FoodTruckMapper {

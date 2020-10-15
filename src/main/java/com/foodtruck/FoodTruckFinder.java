@@ -1,7 +1,7 @@
-package com.oracle.foodtruck;
+package com.foodtruck;
 
-import com.oracle.foodtruck.service.FoodTruckFinderService;
-import com.oracle.foodtruck.service.FoodTruckFinderServiceImpl;
+import com.foodtruck.service.FoodTruckFinderService;
+import com.foodtruck.service.FoodTruckFinderServiceImpl;
 import java.time.LocalDateTime;
 
 public class FoodTruckFinder {
