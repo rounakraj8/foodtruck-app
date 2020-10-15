@@ -23,7 +23,8 @@ Please display results in pages of 10 trucks. That is: if there are more than 10
 
 #### Example  
  
-$ java -cp foo:bar FoodTruckFinder  
+`$ java -cp foo:bar FoodTruckFinder`
+
 &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;NAME       &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;    ADDRESS   
 Mang Hang Catering  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;    1 Thomas More  
 Way Steve’s Mobile Deli &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 145 King Street  
