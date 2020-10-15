@@ -14,6 +14,12 @@ public class FoodTruckMapper {
     objectMapper = new ObjectMapper();
   }
 
+  /**
+   * Method to convert String into List<FoodTruck> object
+   * @param jsonStr
+   * @return
+   */
+
   public List<FoodTruck> getFoodTruckList(final String jsonStr) {
     try {
       return objectMapper.readValue(jsonStr, new TypeReference<List<FoodTruck>>() {

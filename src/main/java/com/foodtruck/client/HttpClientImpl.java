@@ -12,6 +12,13 @@ public class HttpClientImpl implements Client {
 
   private static final String GET = "GET";
 
+  /**
+   * Pass the URL and request-param and get the response as String.class
+   * @param uri
+   * @param requestParam
+   * @return
+   */
+
   @Override
   public String getStringResponse(final String uri, final String requestParam) {
     String urlWithParam = String.format(uri, requestParam);
@@ -24,6 +31,13 @@ public class HttpClientImpl implements Client {
       throw new ConnectionException(uri);
     }
   }
+
+  /**
+   * Method to convert InputStream into String.class
+   * @param conn
+   * @return
+   * @throws IOException
+   */
 
   private String getStringResponseFromConnection(HttpURLConnection conn) throws IOException {
     return new BufferedReader(new InputStreamReader(conn.getInputStream())).lines()

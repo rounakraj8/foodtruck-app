@@ -14,14 +14,29 @@ public class FoodTruckFinderUtil {
 
   private static final DateTimeFormatter TIME_FORMAT_24_HRS = DateTimeFormatter.ofPattern("kk:mm");
 
+  /**
+   * Method to sort List<FoodTruck> by getApplicant
+   *
+   * @param foodTruckList
+   * @return
+   */
+
   public static List<FoodTruck> sortFoodTruckListByName(List<FoodTruck> foodTruckList) {
     Collections.sort(foodTruckList, Comparator.comparing(FoodTruck::getApplicant));
     return foodTruckList;
   }
 
+  /**
+   * Method to filter by time range
+   *
+   * @param foodTruckList
+   * @param localDateTime
+   * @return
+   */
+
   public static List<FoodTruck> filterByTime(List<FoodTruck> foodTruckList,
       LocalDateTime localDateTime) {
-    return  foodTruckList.stream().filter(
+    return foodTruckList.stream().filter(
         foodTruck -> isCurrentTimeInFoodTruckTimingRange(foodTruck, TIME_FORMAT_24_HRS,
             localDateTime))
         .collect(Collectors.toList());
@@ -38,6 +53,14 @@ public class FoodTruckFinderUtil {
       return false;
     }
   }
+
+  /**
+   * Method to get day of the week, by default we get 7 for Sunday but in API data, we get 0 for
+   * Sunday
+   *
+   * @param localDateTime
+   * @return
+   */
 
   public static String getDayOfWeek(LocalDateTime localDateTime) {
     int dayOfWeek = localDateTime.getDayOfWeek().getValue();
