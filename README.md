@@ -10,19 +10,16 @@ The following  should be installed to build & run this app:
 
 ### Install Dependencies
 
-_jackson-databind_ -  It is the only external dependency used in the app. 
+1. **jackson-databind** -  It is the only external dependency used in the app. 
 Since this is mentioned in the pom.xml file as a dependency, so we don't need to explicitly install this.
-    Maven will download this dependency in _install/package_ phase.
+    Maven will download this dependency automatically.
     
 ### Build the App
-First we need to clone this repository `git clone https://github.com/rounakraj8/foodtruck-app.git`
-
-Now to build this app & generate the artifact(JAR), we will use Maven command.
-
-`mvn clean package`
+1. We need to clone this repository. - `git clone https://github.com/rounakraj8/foodtruck-app.git`
+2. Go inside the directory. - `cd foodtruck-app`
+3. Build this app & generate the artifact(JAR), using _mvn_ command. - `mvn clean package`
 
 This command will compile the programs & generate a JAR with all required dependencies.
-This generated artifact(JAR) is standalone and can be run anywhere. 
 
 Sample artifact(JAR) name - `foodtruck-app-1.0-SNAPSHOT.jar`
     
@@ -30,7 +27,7 @@ Sample artifact(JAR) name - `foodtruck-app-1.0-SNAPSHOT.jar`
 
 To run this app, you can use `java -jar target/foodtruck-app-1.0-SNAPSHOT.jar` in the location where generated artifact(JAR) is present.
 
-### Build & Run the App(using start.sh script)
+### Build & Run the App(using _start.sh_ script)
 
 There is a _start.sh_ script in the root folder which can be used to build the artifact(JAR) and run the app.
 
