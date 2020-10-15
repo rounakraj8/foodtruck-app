@@ -39,8 +39,7 @@ To run this app, you can use `java -jar target/foodtruck-app-1.0-SNAPSHOT.jar` i
 
 If you have more than 10 food-truck available, you will get option to either continue or exit.
 
-For continuing, we need to enter 1
-For exiting, we need to enter 0
+For continuing, we need to enter 1 & for exiting, we need to enter 0
 
 ### Build & Run the App(using _start.sh_ script)
 
