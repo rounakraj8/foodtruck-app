@@ -8,20 +8,17 @@ import com.foodtruck.model.FoodTruck;
 import com.foodtruck.util.FoodTruckDisplayUtil;
 import com.foodtruck.util.FoodTruckFinderUtil;
 import java.time.LocalDateTime;
-import java.time.format.DateTimeFormatter;
 import java.util.List;
 
 public class FoodTruckFinderServiceImpl implements FoodTruckFinderService {
 
   private final LocalDateTime localDateTime;
   private final FoodTruckMapper foodTruckMapper;
-  private final DateTimeFormatter dateTimeFormatter;
   private final Client client;
 
   public FoodTruckFinderServiceImpl(LocalDateTime localDateTime) {
     this.localDateTime = localDateTime;
     this.foodTruckMapper = new FoodTruckMapper();
-    this.dateTimeFormatter = DateTimeFormatter.ofPattern("kk:mm");
     this.client = new HttpClientImpl();
   }
 
@@ -33,11 +30,7 @@ public class FoodTruckFinderServiceImpl implements FoodTruckFinderService {
     System.out.println("Finding the Food trucks at: " + localDateTime.toLocalTime());
     String jsonStrResponse = getStringResponse();
     List<FoodTruck> foodTruckList = foodTruckMapper.getFoodTruckList(jsonStrResponse);
-    if (FoodTruckFinderUtil.isFoodTruckListEmpty(foodTruckList)) {
-      System.out.println("No list to display!");
-      return;
-    }
-    FoodTruckFinderUtil.filterByTime(foodTruckList, dateTimeFormatter, localDateTime);
+    FoodTruckFinderUtil.filterByTime(foodTruckList, localDateTime);
     FoodTruckFinderUtil.sortFoodTruckListByName(foodTruckList);
     FoodTruckDisplayUtil.display(foodTruckList);
   }

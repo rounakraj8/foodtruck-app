@@ -11,9 +11,7 @@ import java.util.stream.Collectors;
 
 public class FoodTruckFinderUtil {
 
-  public static boolean isFoodTruckListEmpty(final List<FoodTruck> foodTruckList) {
-    return foodTruckList == null || foodTruckList.size() == 0;
-  }
+  private static final DateTimeFormatter DATE_TIME_FORMATTER = DateTimeFormatter.ofPattern("kk:mm");
 
   public static List<FoodTruck> sortFoodTruckListByName(List<FoodTruck> foodTruckList) {
     Collections.sort(foodTruckList, Comparator.comparing(FoodTruck::getApplicant));
@@ -21,9 +19,9 @@ public class FoodTruckFinderUtil {
   }
 
   public static List<FoodTruck> filterByTime(List<FoodTruck> foodTruckList,
-      DateTimeFormatter dateTimeFormatter, LocalDateTime localDateTime) {
+      LocalDateTime localDateTime) {
     foodTruckList = foodTruckList.stream().filter(
-        foodTruck -> isCurrentTimeInFoodTruckTimingRange(foodTruck, dateTimeFormatter,
+        foodTruck -> isCurrentTimeInFoodTruckTimingRange(foodTruck, DATE_TIME_FORMATTER,
             localDateTime))
         .collect(Collectors.toList());
     return foodTruckList;
