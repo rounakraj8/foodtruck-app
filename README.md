@@ -19,7 +19,7 @@ The following should be installed to build & run this app:
 1. JRE 1.8 or above
 2. Maven 3.6 or above
 
-### Install Dependencies
+### Dependencies
 
 1. **jackson-databind** -  It is the only external dependency used in the app. 
 Since this is mentioned in the pom.xml file as a dependency, so we don't need to explicitly install this.
