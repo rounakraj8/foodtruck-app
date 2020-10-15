@@ -1,5 +1,6 @@
 package com.foodtruck.client;
 
+import com.foodtruck.exceptions.ConnectionException;
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
@@ -20,9 +21,8 @@ public class HttpClientImpl implements Client {
       conn.setRequestMethod(GET);
       return getStringResponseFromConnection(conn);
     } catch (IOException e) {
-      e.printStackTrace();
+      throw new ConnectionException(uri);
     }
-    return null;
   }
 
   private String getStringResponseFromConnection(HttpURLConnection conn) throws IOException {

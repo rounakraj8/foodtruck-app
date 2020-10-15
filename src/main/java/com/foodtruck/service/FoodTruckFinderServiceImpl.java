@@ -30,6 +30,7 @@ public class FoodTruckFinderServiceImpl implements FoodTruckFinderService {
    */
   @Override
   public void findFoodTrucksNow() {
+    System.out.println("Finding the Food trucks at: " + localDateTime.toLocalTime());
     String jsonStrResponse = getStringResponse();
     List<FoodTruck> foodTruckList = foodTruckMapper.getFoodTruckList(jsonStrResponse);
     if (FoodTruckFinderUtil.isFoodTruckListEmpty(foodTruckList)) {

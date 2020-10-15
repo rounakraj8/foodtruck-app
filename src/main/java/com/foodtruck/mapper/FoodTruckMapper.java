@@ -2,6 +2,7 @@ package com.foodtruck.mapper;
 
 import com.fasterxml.jackson.core.type.TypeReference;
 import com.fasterxml.jackson.databind.ObjectMapper;
+import com.foodtruck.exceptions.UnmarshallingException;
 import com.foodtruck.model.FoodTruck;
 import java.util.List;
 
@@ -13,13 +14,12 @@ public class FoodTruckMapper {
     objectMapper = new ObjectMapper();
   }
 
-  public List<FoodTruck> getFoodTruckList(String jsonStr) {
+  public List<FoodTruck> getFoodTruckList(final String jsonStr) {
     try {
       return objectMapper.readValue(jsonStr, new TypeReference<List<FoodTruck>>() {
       });
     } catch (Exception e) {
-      e.printStackTrace();
+      throw new UnmarshallingException(jsonStr);
     }
-    return null;
   }
 }

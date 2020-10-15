@@ -6,10 +6,11 @@ import java.util.Scanner;
 
 public class FoodTruckDisplayUtil {
 
+  private static final int SPACE_BETWEEN_NAME_AND_ADDRESS = 80;
+
   public static void display(List<FoodTruck> foodTrucks) {
     int totalSize = foodTrucks.size();
-    System.out.println("Total Food Truck(s) found: " + totalSize);
-
+    System.out.println("\nTotal Food Truck(s) found: " + totalSize + "\n");
     for (int j = 1; j <= foodTrucks.size(); j++) {
       FoodTruck foodTruck = foodTrucks.get(j - 1);
       displayColumnHeaders(j);
@@ -23,7 +24,7 @@ public class FoodTruckDisplayUtil {
       int input = 0;
       System.out
           .println("\n" + "(" + index + "/" + totalSize + ")"
-              + "\t>>>\t\tPress '1' to continue or '0' to exit ...");
+              + "\t>>>>>>>\t\tPress '1' to continue or '0' to exit ...");
       while (input != 1) {
         input = new Scanner(System.in).nextInt();
         if (input == 0) {
@@ -35,12 +36,14 @@ public class FoodTruckDisplayUtil {
 
   private static void displayRow(FoodTruck foodTruck) {
     System.out.println(
-        String.format("%-40s", foodTruck.getApplicant()) + foodTruck.getLocation());
+        String.format("%-" + SPACE_BETWEEN_NAME_AND_ADDRESS + "s", foodTruck.getApplicant())
+            + foodTruck.getLocation());
   }
 
   private static void displayColumnHeaders(int j) {
     if (j % 10 == 1) {
-      System.out.println(String.format("%10s", "Name") + String.format("%40s", "Address") + "\n");
+      System.out.println(String.format("%10s", "Name") + String
+          .format("%" + SPACE_BETWEEN_NAME_AND_ADDRESS + "s", "Address") + "\n");
     }
   }
 
