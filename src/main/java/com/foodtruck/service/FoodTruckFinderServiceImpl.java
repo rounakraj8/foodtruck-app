@@ -1,12 +1,12 @@
 package com.foodtruck.service;
 
-import com.foodtruck.util.FoodTruckFinderUtil;
 import com.foodtruck.client.Client;
 import com.foodtruck.client.HttpClientImpl;
 import com.foodtruck.constants.URLConstants;
 import com.foodtruck.mapper.FoodTruckMapper;
 import com.foodtruck.model.FoodTruck;
 import com.foodtruck.util.FoodTruckDisplayUtil;
+import com.foodtruck.util.FoodTruckFinderUtil;
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
 import java.util.List;
