@@ -54,5 +54,5 @@ Please email us a zipped folder containing your work. Your submission should inc
 Your code. 
 A README file that contains instructions on how to do the following on Linux or Mac  OSX (if you need an exception to this, let us know):  
 ○ install dependencies.  
-○ build your program. 
+○ build your program.   
 ○ run your program, with example commands on how to run it if necessary.  
