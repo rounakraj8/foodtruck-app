@@ -10,8 +10,8 @@ Since we are using JSON data from API, we need to use libraries to unmarshal the
 
 ### Data Source
 
-   San Francisco government’s website has a public data
-   URL - https://data.sfgov.org/Economy-and-Community/Mobile-Food-Schedule/jjew-r69b
+   San Francisco government’s website has a public data    
+   Data API URL - https://data.sfgov.org/Economy-and-Community/Mobile-Food-Schedule/jjew-r69b
 
 ### Prerequisites
 
