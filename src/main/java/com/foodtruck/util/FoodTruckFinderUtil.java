@@ -21,17 +21,16 @@ public class FoodTruckFinderUtil {
 
   public static List<FoodTruck> filterByTime(List<FoodTruck> foodTruckList,
       LocalDateTime localDateTime) {
-    foodTruckList = foodTruckList.stream().filter(
+    return  foodTruckList.stream().filter(
         foodTruck -> isCurrentTimeInFoodTruckTimingRange(foodTruck, TIME_FORMAT_24_HRS,
             localDateTime))
         .collect(Collectors.toList());
-    return foodTruckList;
   }
 
   public static boolean isCurrentTimeInFoodTruckTimingRange(FoodTruck foodTruck,
       DateTimeFormatter dateTimeFormatter, LocalDateTime localDateTime) {
     try {
-      return LocalTime.parse(foodTruck.getStart24() + 1, dateTimeFormatter)
+      return LocalTime.parse(foodTruck.getStart24(), dateTimeFormatter)
           .isBefore(localDateTime.toLocalTime()) && LocalTime.parse(foodTruck
           .getEnd24(), dateTimeFormatter).isAfter(localDateTime.toLocalTime());
     } catch (DateTimeParseException e) {
