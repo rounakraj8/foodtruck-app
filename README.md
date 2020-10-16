@@ -15,7 +15,7 @@ Since we are using JSON data from API, we need to use libraries to unmarshal the
 
 ### Prerequisites
 
-The following should be installed to build & run this app:
+The following should be installed on your system to build & run this app:
 1. JRE 1.8 or above
 2. Maven 3.6 or above
 
